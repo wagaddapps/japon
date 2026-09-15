@@ -1,0 +1,9 @@
+# JAMAIS publier : numéros de réservation, liens d'annulation, mots de passe
+confidentiel.html
+
+# Notes internes + credentials de déploiement
+.claude/
+
+# Divers
+.DS_Store
+Thumbs.db

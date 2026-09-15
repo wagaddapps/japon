@@ -1,0 +1,131 @@
+CREDITS PHOTO — Japon en famille, octobre 2026
+==========================================================
+Toutes les images proviennent de Wikimedia Commons et sont utilisees
+sous licence libre. Auteurs et licences ci-dessous.
+
+[img/arashiyama.jpg]
+  Titre   : Arashiyama-Bamboo-Grove-Sunset.jpg
+  Auteur  : Bjørn Christian Tørrissen
+  Licence : CC BY-SA 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:Arashiyama-Bamboo-Grove-Sunset.jpg
+
+[img/chureito.jpg]
+  Titre   : 12-Chureito-pagoda-and-Mount-Fuji-Japan (29677439878).jpg
+  Auteur  : Dang Son
+  Licence : CC0
+  Source  : https://commons.wikimedia.org/wiki/File:12-Chureito-pagoda-and-Mount-Fuji-Japan_(29677439878).jpg
+
+[img/dotonbori.jpg]
+  Titre   : Dotonbori, Osaka, at night, November 2016.jpg
+  Auteur  : Martin Falbisoner
+  Licence : CC BY-SA 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:Dotonbori,_Osaka,_at_night,_November_2016.jpg
+
+[img/fuji.jpg]
+  Titre   : Autumn leaf color and Mount Fuji from Lake Kawaguchi.jpg
+  Auteur  : Alpsdake
+  Licence : CC BY-SA 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:Autumn_leaf_color_and_Mount_Fuji_from_Lake_Kawaguchi.jpg
+
+[img/fushimi.jpg]
+  Titre   : Double torii path at Fushimi Inari Taisha Shrine, Kyoto, Japan.jpg
+  Auteur  : Basile Morin
+  Licence : CC BY-SA 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:Double_torii_path_at_Fushimi_Inari_Taisha_Shrine,_Kyoto,_Japan.jpg
+
+[img/ghibli.jpg]
+  Titre   : Expo&Linimo-2005-7-22.jpg
+  Auteur  : Photo by Syohei Arai(talk)
+  Licence : CC BY-SA 3.0
+  Source  : https://commons.wikimedia.org/wiki/File:Expo%26Linimo-2005-7-22.jpg
+
+[img/kinkakuji.jpg]
+  Titre   : Golden Pavilion, Kinkaku-ji, Kyoto, 20240820 1523 5130.jpg
+  Auteur  : Jakub Hałun
+  Licence : CC BY 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:Golden_Pavilion,_Kinkaku-ji,_Kyoto,_20240820_1523_5130.jpg
+
+[img/kiyomizu.jpg]
+  Titre   : Kiyomizu-dera, Kyoto, November 2016 -01.jpg
+  Auteur  : Martin Falbisoner
+  Licence : CC BY-SA 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:Kiyomizu-dera,_Kyoto,_November_2016_-01.jpg
+
+[img/nagoya.jpg]
+  Titre   : Nagoya Castle(Edit2).jpg
+  Auteur  : Base64 edit by Noodle snacks
+  Licence : CC BY-SA 3.0
+  Source  : https://commons.wikimedia.org/wiki/File:Nagoya_Castle(Edit2).jpg
+
+[img/nara.jpg]
+  Titre   : 003 Nara deer in Japan - deer of Nara Park under autumn leaves.jpg
+  Auteur  : Marek Ślusarczyk (Tupungato) Photo portfolio
+  Licence : CC BY 3.0
+  Source  : https://commons.wikimedia.org/wiki/File:003_Nara_deer_in_Japan_-_deer_of_Nara_Park_under_autumn_leaves.jpg
+
+[img/osakajo.jpg]
+  Titre   : Osaka Castle, Keep tower, South view 20190415 1.jpg
+  Auteur  : DXR
+  Licence : CC BY-SA 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:Osaka_Castle,_Keep_tower,_South_view_20190415_1.jpg
+
+[img/shibuya.jpg]
+  Titre   : Shibuya Crossing, Aerial.jpg
+  Auteur  : David Kernan
+  Licence : CC BY 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:Shibuya_Crossing,_Aerial.jpg
+
+[img/skytree.jpg]
+  Titre   : TOKYO SKYTREE TOWER JAPAN JUNE 2012 (7455952364).jpg
+  Auteur  : calflier001
+  Licence : CC BY-SA 2.0
+  Source  : https://commons.wikimedia.org/wiki/File:TOKYO_SKYTREE_TOWER_JAPAN_JUNE_2012_(7455952364).jpg
+
+[img/tokyo.jpg]
+  Titre   : Senso-ji Temple @ Asakusa (13824517393).jpg
+  Auteur  : Guilhem Vellut from Annecy, France
+  Licence : CC BY 2.0
+  Source  : https://commons.wikimedia.org/wiki/File:Senso-ji_Temple_@_Asakusa_(13824517393).jpg
+
+[img/yokohama.jpg]
+  Titre   : Minato Mirai - Yokohama Skyline March 2025.jpg
+  Auteur  : Justin Taylor
+  Licence : CC BY 2.0
+  Source  : https://commons.wikimedia.org/wiki/File:Minato_Mirai_-_Yokohama_Skyline_March_2025.jpg
+
+
+[img/cos-kimono.jpg]
+  Titre   : Halloween Kimono.JPG
+  Auteur  : Ariel Steiner
+  Licence : CC BY 3.0
+  Source  : https://commons.wikimedia.org/wiki/File:Halloween_Kimono.JPG
+
+[img/cos-osaka1.jpg]
+  Titre   : 2016 Halloween in Osaka (8).jpg
+  Auteur  : Mr.ちゅらさん
+  Licence : CC BY-SA 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:2016_Halloween_in_Osaka_(8).jpg
+
+[img/cos-osaka2.jpg]
+  Titre   : 2016 Halloween in Osaka (14).jpg
+  Auteur  : Mr.ちゅらさん
+  Licence : CC BY-SA 4.0
+  Source  : https://commons.wikimedia.org/wiki/File:2016_Halloween_in_Osaka_(14).jpg
+
+[img/cos-parade.jpg]
+  Titre   : Halloween in Tama Center 2011.jpg
+  Auteur  : An azalea
+  Licence : CC BY-SA 3.0
+  Source  : https://commons.wikimedia.org/wiki/File:Halloween_in_Tama_Center_2011.jpg
+
+[img/cos-shibuya1.jpg]
+  Titre   : Shibuya Halloween 2016 (October 31) (34373882564).jpg
+  Auteur  : Dick Thomas Johnson from Tokyo, Japan
+  Licence : CC BY 2.0
+  Source  : https://commons.wikimedia.org/wiki/File:Shibuya_Halloween_2016_(October_31)_(34373882564).jpg
+
+[img/cos-shop.jpg]
+  Titre   : Boutique Takenoko 20131001.jpg
+  Auteur  : Sjaak Kempe from Groningen, The Netherlands
+  Licence : CC BY 2.0
+  Source  : https://commons.wikimedia.org/wiki/File:Boutique_Takenoko_20131001.jpg
