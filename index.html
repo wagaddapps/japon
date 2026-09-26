@@ -2950,7 +2950,7 @@ body.dvopen{overflow:hidden}
 
 <div id="remind" role="dialog" aria-modal="true" aria-labelledby="remtitle">
   <div class="rembox">
-    <h3 id="remtitle">🚄 Transports à réserver — 1 mois avant, jour pour jour</h3>
+    <h3 id="remtitle">🚄 À réserver et à préparer avant le départ</h3>
     <p>Cochez au fur et à mesure : la liste se souvient de vos cases sur cet appareil.
       Heures d'ouverture en <b>heure du Koweït</b> (Japon = Koweït + 6 h).
       Astuce : <b>SmartEX accepte déjà les pré‑réservations</b> jusqu'à un an à l'avance, confirmées
@@ -2965,6 +2965,7 @@ body.dvopen{overflow:hidden}
       <li data-k="nozomi2" class="hot"><input type="checkbox" id="rm-nozomi2"><label for="rm-nozomi2"><span class="d">1ᵉʳ oct 🔴</span> Shinkansen Nozomi Shin‑Osaka → Tokyo · dim. 1ᵉʳ nov 09:00 <span class="w">— SmartEX, ouverture 04:00 Koweït — <b>pré‑réservez‑le dès maintenant</b>. C'est le vol du retour.</span></label></li>
       <li data-k="bagages" class="hot"><input type="checkbox" id="rm-bagages"><label for="rm-bagages"><span class="d">1ᵉʳ oct 🧳</span> <b>Les 2 grandes valises</b> dans ce même Nozomi du 1ᵉʳ nov <span class="w">— pas de takkyubin possible vers Narita : elles voyagent avec vous (&gt; 160 cm L+l+h). Dans SmartEX, cocher <b>« Seat with oversized baggage area »</b> pour <b>2 des 4 sièges</b> (dernière rangée de la voiture, gratuit ; sans réservation : 1 000 ¥ et pas de place garantie). Les 3 petites valises cabine vont dans les porte‑bagages. Hikari et Nozomi Nagoya → Kyoto : rien à réserver, les 2 grandes sont parties en takkyubin.</span></label></li>
       <li data-k="nex2"><input type="checkbox" id="rm-nex2"><label for="rm-nex2"><span class="d">1ᵉʳ oct</span> N'EX Tokyo → Narita T1 · dim. 1ᵉʳ nov 12:15 <span class="w">— JR East, ouverture 04:00 Koweït ; demande anticipée possible dès le 24 sept (7 jours avant).</span></label></li>
+      <li data-k="vjw" class="hot"><input type="checkbox" id="rm-vjw"><label for="rm-vjw"><span class="d">17 oct 📱</span> <b>Visit Japan Web : QR codes des 4 voyageurs</b> <span class="w">— vjw-lp.digital.go.jp, enfants compris : passeport, vol EY 800 (arrivée Narita lun. 19 oct), adresse du MIMARU Tokyo, puis générer le QR <b>immigration</b> et le QR <b>douane</b>. La veille du départ au plus tard, et <b>capture d'écran de chaque QR</b> : pas de réseau garanti à l'arrivée.</span></label></li>
       <li data-k="nex1"><input type="checkbox" id="rm-nex1"><label for="rm-nex1"><span class="d">à l'arrivée</span> N'EX Narita T1 → Tokyo · lun. 19 oct 14:45 <span class="w">— ouvert depuis le 19 sept : JR East en ligne, ou guichet JR à Narita.</span></label></li>
     </ul>
     <div class="btns">
@@ -2983,7 +2984,7 @@ body.dvopen{overflow:hidden}
     var over=new Date()>new Date(2026,10,1);
     var done=false, ticks={}, fab=document.getElementById('remfab'), cnt=document.getElementById('remcount');
     /* la clé change à chaque nouvelle version de la liste : un ancien « ne plus afficher » ne masque pas les nouveaux items */
-    var VER='v4-bus';
+    var VER='v5-vjw';
     try{ done=localStorage.getItem('jp-transport-remind')===VER; }catch(e){}
     try{ ticks=JSON.parse(localStorage.getItem('jp-transport-ticks')||'{}')||{}; }catch(e){}
     var items=pop.querySelectorAll('#remlist li');
