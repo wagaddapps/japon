@@ -319,14 +319,25 @@ footer a{color:var(--ink-2)}
 .maplegend i{width:18px;height:4px;border-radius:2px;flex:none;position:relative;top:-3px}
 .maplegend b{font-weight:600}
 .maplegend i.dash{background:repeating-linear-gradient(90deg,#007D43 0 5px,transparent 5px 9px)!important}
-/* ---------- popup rappel Fuji Excursion ---------- */
+/* ---------- popup rappel transports à réserver ---------- */
 #remind{position:fixed;inset:0;background:rgba(10,20,28,.5);z-index:100;display:none;
   align-items:center;justify-content:center;padding:20px}
 #remind.on{display:flex}
 .rembox{background:var(--card);color:var(--ink);border:1px solid var(--line);
-  border-top:5px solid var(--red);border-radius:16px;max-width:500px;width:100%;
+  border-top:5px solid var(--zain-teal, #00B5CA);border-radius:16px;max-width:560px;width:100%;
+  max-height:calc(100vh - 40px);overflow:auto}
+.rembox ul{list-style:none;padding:0;margin:0 0 18px}
+.rembox li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line);font-size:13.5px;line-height:1.45}
+.rembox li:last-child{border-bottom:0}
+.rembox li input{margin-top:3px;flex:none;width:16px;height:16px;accent-color:#007D43}
+.rembox li label{cursor:pointer;color:var(--ink)}
+.rembox li .d{display:inline-block;min-width:82px;font-weight:700;color:#0053A5}
+.rembox li .w{color:var(--ink-2);font-size:12.5px}
+.rembox li.ok label{text-decoration:line-through;color:var(--ink-2)}
+.rembox li.hot .d{color:#c0392b}
+.rembox{
   padding:24px 26px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-.rembox h3{font-size:18px;margin-bottom:10px}
+.rembox h3{font-size:18px;margin-bottom:6px}
 .rembox p{font-size:14px;color:var(--ink-2);margin:0 0 18px;line-height:1.55}
 .rembox .btns{display:flex;gap:10px;flex-wrap:wrap}
 .rembox button{border:0;border-radius:10px;padding:10px 16px;font-weight:700;
@@ -391,28 +402,25 @@ footer a{color:var(--ink-2)}
 <section id="alerte">
   <div class="wrap">
     <div class="card" style="border-color:var(--red);border-left:4px solid var(--red)">
-      <div class="b b-red">⏰ Prochaine échéance — mercredi 23 septembre</div>
-      <h2 style="font-size:20px;margin-top:12px">Train Fuji Excursion : réservation le 23 septembre à l'ouverture</h2>
+      <div class="b b-red">⏰ Prochaine échéance — vendredi 25 septembre (Hikari Mishima → Nagoya, SmartEX)</div>
+      <h2 style="font-size:20px;margin-top:12px">Fuji Excursion réservé ✅ — restent les Shinkansen, le N'EX du retour et trois trajets locaux</h2>
       <p class="small" style="margin-top:8px">Pour les températures, les vêtements et la liste de valises,
         voir <a href="#meteo"><b>Météo</b></a> et <a href="#valises"><b>Valises</b></a> en bas de page.</p>
       <div class="grid g3 mt">
         <div>
-          <div class="b b-red">🔴 Fuji Excursion — mercredi 23 septembre</div>
-          <p class="small" style="margin-top:8px"><b>Le seul achat à date fixe encore devant vous.</b>
-            Le <b>JR Limited Express <i>Fuji Excursion</i></b> du <b>vendredi 23 octobre</b>
-            (Shinjuku → Kawaguchiko direct, ≈ 1 h 55, environ 4 130 ¥/adulte) ouvre à la réservation
-            <b>1 mois avant, jour pour jour — soit le mercredi 23 septembre à 10h00 JST</b>
-            (= <b>4h00 heure du Koweït</b>). Les sièges sont à <b>réservation obligatoire</b> et ce
-            train est très demandé en pleine saison des couleurs : il faut viser l'ouverture pour
-            obtenir <b>4 places ensemble</b>.
-            <br><b>🛒 Le jour J, dans l'ordre :</b> créez le compte
-            <a href="https://www.jreast.co.jp/multi/en/" target="_blank" rel="noopener"><b>JR East</b></a>
-            <b>avant</b> le 23 (carte enregistrée), puis réservez le départ de <b>Shinjuku 08:30</b>,
-            4 sièges alignés. <b>Si le train affiche complet :</b> basculez immédiatement sur le
-            <b>bus autoroutier Shinjuku → Kawaguchiko</b>
-            (<a href="https://www.fujikyubus.co.jp/" target="_blank" rel="noopener">Fujikyu Bus</a>,
-            ≈ 2 h, moins cher) — le programme du jour 6 tient dans les deux cas, seul l'horaire de
-            départ change. Détail dans la <a href="#checklist"><b>checklist</b></a>.</p>
+          <div class="b b-green2">✅ Fuji Excursion — réservé le 23 septembre</div>
+          <p class="small" style="margin-top:8px"><b>Le train le plus tendu du voyage est dans la poche.</b>
+            <b>Fuji‑Excursion n° 11</b> du <b>vendredi 23 octobre</b>, Shinjuku <b>09:30</b> → Kawaguchiko
+            <b>11:28</b>, direct. <b>Voiture 1, sièges 6C · 6D · 7C · 7D</b> — deux rangées côté D, la
+            fenêtre côté Fuji dans le sens de la marche (pivotez les sièges pour faire un carré). 3 adultes
+            + 1 enfant, <b>14 800 ¥</b> tout compris (trajet + réservation), réservé sur JR‑EAST Train
+            Reservation. Le 9h30 a été préféré au 8h30 pour avoir les 4 places ensemble ; le jour 6 est
+            calé dessus.
+            <br><b>🎫 À ne pas oublier : ce sont des billets papier à retirer.</b> Pas d'e‑ticket sur la
+            ligne Fujikyu — il faut passer à un <b>distributeur JR East à écran « Reserved Seat Ticket »</b>
+            (lecteur QR) avec le QR code de la confirmation et la <b>carte VISA utilisée</b>. Prévu le
+            <b>19 octobre à Tokyo Station</b>, en sortant du N'EX (jour 2) : 5 minutes, et les 4 billets
+            sont dans le passeport jusqu'au 23. Références dans le fichier confidentiel.</p>
         </div>
         <div>
           <div class="b b-green2">✅ Les 3 parcs achetés — Express Pass USJ inclus</div>
@@ -438,16 +446,81 @@ footer a{color:var(--ink-2)}
         </div>
       </div>
       <div class="mt" style="border-top:1px solid var(--line);padding-top:14px">
-        <div class="b b-yellow">🗓️ Ensuite — les créneaux à prendre</div>
-        <ul class="small" style="padding-left:18px;margin-top:10px">
-          <li><b>Maintenant, sans attendre</b> 🟠 — les <b>créneaux horodatés</b> s'ouvrent 3 à
-            5 semaines avant, la fenêtre est donc ouverte pour le début du séjour :
-            <b>Shibuya Sky</b> (viser 16:20 ou 16:40 pour le coucher de soleil), <b>Skytree</b>,
-            <b>teamLab</b> et le <b>Sagano Romantic Train</b>.</li>
-          <li><b>1<sup>er</sup> octobre</b> 🟠 — ouverture du <b>Shinkansen du retour</b> sur SmartEX
-            (Shin‑Osaka → Tokyo le 1<sup>er</sup> novembre), le plus important des trois trains :
-            <i>Nozomi</i> de 09h00, 4 sièges ensemble et la <b>rangée à espace bagages</b> en fin de
-            voiture. Les deux autres (Mishima → Nagoya, Nagoya → Kyoto) s'ouvrent aussi 1 mois avant.</li>
+        <div class="b b-yellow">🗓️ Ensuite — le calendrier des ouvertures trains</div>
+        <p class="small" style="margin-top:8px"><b>Les trains japonais ouvrent à la réservation 1 mois
+          avant, jour pour jour.</b> Sur les neuf trajets intercités, <b>sept sont à réserver</b> — et ils
+          s'ouvrent tous entre le 19 septembre et le 1<sup>er</sup> octobre. Horaires, prix et alternatives
+          dans <a href="#transports"><b>Transports</b></a>.
+          <br><b>À faire avant la première ouverture :</b> créer les deux comptes, carte bancaire
+          enregistrée — <a href="https://www.jreast.co.jp/multi/en/" target="_blank" rel="noopener"><b>JR East</b></a>
+          (Fuji Excursion et les deux N'EX) et <a href="https://smart-ex.jp/" target="_blank" rel="noopener"><b>SmartEX</b></a>
+          (les trois Shinkansen). On ne crée pas un compte à 4h du matin.</p>
+        <div class="tw mt">
+          <table>
+            <thead><tr>
+              <th>Ouverture</th><th>Trajet</th><th>Où réserver</th><th>Le point de vigilance</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td><b>Sam 19/09</b></td>
+                <td>N'EX <b>Narita T1 → Tokyo</b><br><span class="tiny">lun. 19 oct · 14:45</span></td>
+                <td>JR East, ou guichet JR à l'arrivée</td>
+                <td>Sans tension. Se prend très bien au guichet en sortant des bagages — le réserver à l'avance évite juste la file après 14 h d'avion.</td>
+              </tr>
+              <tr>
+                <td><b>Mer 23/09</b><br><span class="b b-green2">✅ réservé</span></td>
+                <td>Fuji Excursion <b>Shinjuku → Kawaguchiko</b><br><span class="tiny">ven. 23 oct · 09:30 → 11:28</span></td>
+                <td>JR East</td>
+                <td><b>Fait le 23 septembre</b> : Fuji‑Excursion n° 11, voiture 1, sièges 6C·6D·7C·7D (côté Fuji), 14 800 ¥. <b>Billets papier à retirer</b> à un distributeur JR East avant le départ — prévu le 19 oct à Tokyo Station.</td>
+              </tr>
+              <tr>
+                <td><b>Ven 25/09</b></td>
+                <td>Shinkansen <i>Hikari</i> <b>Mishima → Nagoya</b><br><span class="tiny">dim. 25 oct · 13:45</span></td>
+                <td>SmartEX</td>
+                <td>Sièges <b>côté droit</b> dans le sens de la marche : le Fuji est là au départ. Vous arrivez de Kawaguchiko en bus, gardez une marge d'1 h à Mishima.</td>
+              </tr>
+              <tr>
+                <td><b>Dim 27/09</b></td>
+                <td>Shinkansen <i>Nozomi</i> <b>Nagoya → Kyoto</b><br><span class="tiny">mar. 27 oct · 14:00</span></td>
+                <td>SmartEX</td>
+                <td>Le plus facile : 36 min, un départ toutes les 10 min. À réserver quand même pour avoir les 4 places ensemble avec les sacs.</td>
+              </tr>
+              <tr>
+                <td><b>Mar 29/09</b></td>
+                <td><b>Sagano Romantic Train</b> (Arashiyama)<br><span class="tiny">jeu. 29 oct · 13:45</span></td>
+                <td>Guichet JR West / agences en ligne</td>
+                <td>Wagons ouverts, ≈ 880 ¥ — et <b>complet en saison des couleurs</b>. C'est le seul « train plaisir » du voyage : s'il part, le reste du jour 12 tient sans lui.</td>
+              </tr>
+              <tr>
+                <td><b>Mer 30/09</b></td>
+                <td>Kintetsu Ltd Express <b>Kyoto → Nara</b><br><span class="tiny">ven. 30 oct · matin</span></td>
+                <td>Site Kintetsu — <b>pas</b> SmartEX</td>
+                <td>Ligne privée, hors réseau JR : ni SmartEX ni JR Pass n'y donnent accès. Sièges réservés, ≈ 1 280 ¥/adulte. La gare Kintetsu Nara est à 5 min du parc aux daims.</td>
+              </tr>
+              <tr>
+                <td><b>Jeu 01/10</b><br><span class="b b-red">🔴 le plus important</span></td>
+                <td>Shinkansen <i>Nozomi</i> <b>Shin‑Osaka → Tokyo</b><br><span class="tiny">dim. 1<sup>er</sup> nov · 09:00</span></td>
+                <td>SmartEX</td>
+                <td>4 sièges ensemble <b>et la rangée à espace bagages en fin de voiture</b> — gratuite, mais obligatoire au‑delà de 160 cm cumulés, et vous voyagez avec les 5 valises (pas de takkyubin vers Narita). Côté droit pour le Fuji vers 10h20.</td>
+              </tr>
+              <tr>
+                <td><b>Jeu 01/10</b></td>
+                <td>N'EX <b>Tokyo → Narita T1</b><br><span class="tiny">dim. 1<sup>er</sup> nov · 12:15</span></td>
+                <td>JR East</td>
+                <td>Même jour d'ouverture que le Nozomi, autant tout faire d'un coup. On vise le <b>12:15</b>, pas le 11:45 : 15 min de correspondance avec escaliers depuis les quais Shinkansen.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="small mt" style="padding-left:18px">
+          <li><b>Maintenant, sans attendre</b> 🟠 — le <b>bus autoroutier Kawaguchiko → Mishima</b> du
+            25 octobre (Fujikyu, ≈ 2 260 ¥/adulte, sièges réservés) : il ne suit pas la règle du mois et il
+            est <b>moins cher en ligne</b> qu'au guichet — <a href="https://www.highwaybus.com/gp/index" target="_blank" rel="noopener"><b>highwaybus.com</b></a>.
+            Même chose pour les <b>créneaux horodatés</b>, ouverts 3 à 5 semaines avant : <b>Shibuya Sky</b>
+            (viser 16:20 ou 16:40 pour le coucher de soleil), <b>Skytree</b> et <b>teamLab</b>.</li>
+          <li><b>Rien à réserver</b> ⚪️ pour Nara → Osaka‑Namba (Kintetsu rapide), le Fujikyu local vers
+            Shimoyoshida (Chureito) et tous les métros : <b>une carte IC par personne</b> suffit — tarif
+            enfant au guichet pour le cadet de 10 ans, passeport à l'appui.</li>
           <li><b>Sièges et repas enfants Etihad</b> 🔴 — toujours en attente : les vols sont émis mais
             aucun siège n'est attribué, et le changement d'horaire du 18 octobre a remis celui de
             l'A380 à zéro. Voir <a href="#vols"><b>Vols</b></a>.</li>
@@ -929,6 +1002,7 @@ footer a{color:var(--ink-2)}
             <li><time>13:00</time><p>Immigration + douane avec les QR codes Visit Japan Web<span class="n">Générez les 4 QR la veille du départ : ça divise l'attente par trois.</span></p></li>
             <li><time>14:00</time><p>eSIM activée, cartes IC rechargées, retrait du Pocket Wi‑Fi si loué<span class="n">Suica ou PASMO pour tout le monde, y compris les enfants (tarif enfant 6‑11 ans à demander au guichet).</span></p></li>
             <li><time>14:45</time><p>Narita Express jusqu'à Tokyo Station (55 min)<span class="n">≈ 3 250 ¥/adulte, moitié pour l'enfant de 10 ans. Sièges réservés, gros espace bagages.</span></p></li>
+            <li><time>15:45</time><p>🎫 <b>Retrait des 4 billets Fuji Excursion</b> à un distributeur JR East de Tokyo Station<span class="n">Cinq minutes en sortant du N'EX, avant de quitter la gare : distributeur à écran <b>« Reserved Seat Ticket Vending Machine »</b> avec lecteur QR (près des portiques Marunouchi ou Yaesu, ou au JR EAST Travel Service Center). Bouton « Pick up reserved tickets » → QR code de l'e‑mail de confirmation (ou le code de retrait) + <b>la carte VISA du paiement</b>. Les billets Fuji Excursion sont en papier obligatoirement (ligne Fujikyu) — rangez‑les avec les passeports jusqu'au 23. Si trop fatigués : le 20 au matin, même endroit.</span></p></li>
             <li><time>16:00</time><p>Installation au <b>MIMARU Tokyo Station East</b> (réservé ✅ — check‑in dès 15h00), douche, on ne s'assoit pas trop longtemps<span class="n">Adresse taxi : 〒104‑0032 東京都中央区八丁堀1‑12‑8 · ☎ 03‑6262‑8221.</span></p></li>
             <li><time>17:30</time><p>Premier contact : konbini du coin, puis ramen ou gyoza dans le quartier<span class="n">Le rayon konbini est en soi une activité pour les enfants. Onigiri, Pocky, boissons improbables. 🚶 Tout est à pied autour de l'hôtel. <a href="https://www.google.com/maps/search/?api=1&amp;query=ramen%20restaurants%20Hatchobori%20Tokyo" target="_blank" rel="noopener">🍽 restos autour de l'hôtel ↗</a></span></p></li>
             <li><time>20:30</time><p>Extinction des feux tôt</p></li>
@@ -1041,16 +1115,16 @@ footer a{color:var(--ink-2)}
         <div class="daybody">
           <div class="dayimgs"><figure><img src="img/fuji.jpg" alt="Le mont Fuji et les érables rouges" loading="lazy"><figcaption>Le Fuji depuis le lac Kawaguchi, en automne</figcaption></figure></div>
           <ul class="tl">
-            <li><time>07:30</time><p>🧳 Expédier les 2 grandes valises directement à l'hôtel de Kyoto<span class="n">Takkyubin (Yamato) : bordereau à la réception du MIMARU, sans réservation, ≈ 2 500 ¥ la valise, paiement sur place. Adresse du MIMARU Kyoto Station en japonais sur la confirmation de réservation + nom + date de check‑in (27 oct). Livrée le 24–25, la réception de Kyoto (24h/24) la garde. On voyage léger pendant les 4 jours Fuji + Nagoya — mode d'emploi complet en tête du programme.</span></p></li>
-            <li><time>08:00</time><p>✅ <b>Check‑out du MIMARU Tokyo</b><span class="n">Tour complet de l'appartement avant de rendre les clés : chargeurs, lave‑linge (un vêtement oublié dans le tambour est un classique), frigo, coffre. Vous partez avec les 3 petites valises cabine — les 2 grandes sont au comptoir takkyubin.</span></p></li>
-            <li><time>08:30</time><p>JR Limited Express <i>Fuji Excursion</i>, Shinjuku → Kawaguchiko, direct<span class="n">≈ 1 h 55, environ 4 130 ¥/adulte, sièges réservés obligatoires. Réservation ouverte 1 mois avant, soit le 23 septembre — mettez une alarme, c'est un train très demandé en pleine saison des couleurs.</span></p></li>
-            <li><time>10:30</time><p>Arrivée à Kawaguchiko, bagages déposés au <b>ryokan Maruei</b> (réservé ✅ — check‑in dès 15h00)<span class="n">🚕 De la gare au ryokan (rive sud du lac) : taxi ≈ 10 min, ou bus rétro ligne rouge. ⭐ Au check‑in à 15h00 : réservez tout de suite un créneau du <b>bain privatif panoramique vue Fuji</b> (30 min par groupe, ≈ 1 650 ¥, premier arrivé premier servi) — visez le matin du 24, quand le Fuji est le plus dégagé.</span></p></li>
-            <li><time>11:15</time><p>🎫 <b>Acheter le pass bus 2 jours</b> (≈ 1 500 ¥/adulte) au guichet Fujikyu devant la gare<span class="n">Le pass « Kawaguchiko·Saiko·Motosuko » couvre les <b>3 lignes touristiques (rouge, verte, bleue)</b> en illimité sur 2 jours — il sert dès maintenant pour Oishi Park, et demain pour les grottes de lave et le village Iyashi‑no‑Sato. En espèces au guichet ou à bord ; profitez‑en pour prendre la <b>fiche horaire papier</b> des lignes verte et bleue (indispensable demain après‑midi, fréquence réduite hors saison). <a href="https://ticket.jorudan.co.jp/fujikyubus/ksm-2d/en/" target="_blank" rel="noopener">🎫 pass 2 jours en ligne (Jorudan) ↗</a></span></p></li>
-            <li><time>11:30</time><p>Bus rétro ligne rouge autour du lac jusqu'à Oishi Park<span class="n">Vue dégagée sur le Fuji au‑dessus du lac, parterres de kochia rouges en automne. Départ toutes les ~15 min de la gare de Kawaguchiko, Oishi Park est le terminus (~30 min). <a href="https://en.kawaguchiko.net/kawaguchiko-sight-seeing-bus-red-line/" target="_blank" rel="noopener">🚌 ligne rouge : arrêts &amp; horaires ↗</a></span></p></li>
-            <li><time>13:00</time><p>Déjeuner <i>hoto</i> — grosses nouilles plates au miso et courge<span class="n">Le plat de la région de Yamanashi. Copieux, réchauffant, et ça plaît aux enfants. <b>Choisissez une table avec vue sur le Fuji</b> — plusieurs adresses autour d'Oishi Park et de la rive nord s'y prêtent : c'est le déjeuner-carte-postale du voyage. <a href="https://www.google.com/maps/search/?api=1&amp;query=hoto%20restaurant%20Fuji%20view%20Kawaguchiko" target="_blank" rel="noopener">🍽 restos hoto avec vue ↗</a></span></p></li>
-            <li><time>14:30</time><p>Téléphérique Mt Fuji Panoramic (Kachi Kachi) : 3 min de montée, panorama lac + Fuji<span class="n">En haut : balançoire face au Fuji, cloche des amoureux, sentier court. Comptez 1 h 30. 💡 Billet combiné téléphérique + bateau disponible à la caisse si vous prenez l'option ci‑dessous.</span></p></li>
-            <li><time>16:00</time><p><i>Option</i> 🚤 promenade en bateau sur le lac (20 min)<span class="n">L'embarcadère est au pied du téléphérique — zéro trajet. Le Fuji vu depuis l'eau, en fin d'après‑midi quand la lumière rase le lac : la photo qui complète celle d'Oishi Park. Si vous la faites, l'onsen glisse simplement à 17h — le dîner kaiseki reste à 18h30.</span></p></li>
-            <li><time>16:30</time><p>Onsen du ryokan — rotenburo sur le toit avec vue sur le Fuji, ou le bain privatif si votre créneau est ce soir<span class="n">17h si vous avez pris le bateau.</span></p></li>
+            <li><time>08:30</time><p>🧳 Expédier les 2 grandes valises directement à l'hôtel de Kyoto<span class="n">Takkyubin (Yamato) : bordereau à la réception du MIMARU, sans réservation, ≈ 2 500 ¥ la valise, paiement sur place. Adresse du MIMARU Kyoto Station en japonais sur la confirmation de réservation + nom + date de check‑in (27 oct). Livrée le 24–25, la réception de Kyoto (24h/24) la garde. On voyage léger pendant les 4 jours Fuji + Nagoya — mode d'emploi complet en tête du programme.</span></p></li>
+            <li><time>09:00</time><p>✅ <b>Check‑out du MIMARU Tokyo</b><span class="n">Tour complet de l'appartement avant de rendre les clés : chargeurs, lave‑linge (un vêtement oublié dans le tambour est un classique), frigo, coffre. Vous partez avec les 3 petites valises cabine — les 2 grandes sont au comptoir takkyubin.</span></p></li>
+            <li><time>09:30</time><p>JR Limited Express <i>Fuji Excursion</i>, Shinjuku → Kawaguchiko, direct<span class="n">≈ 1 h 55, environ 4 130 ¥/adulte, sièges réservés obligatoires. <b>✅ Réservé le 23 septembre : Fuji‑Excursion n° 11, voiture 1, sièges 6C · 6D · 7C · 7D</b> — D est la fenêtre côté Fuji, pivotez les deux rangées en carré. 14 800 ¥ pour les quatre. <b>Billets papier retirés le 19 à Tokyo Station : à avoir sur soi</b>, avec les passeports. Le 9h30 a été préféré au 8h30 pour les 4 places ensemble — le matin est plus détendu, pas de lever aux aurores le jour du check‑out.</span></p></li>
+            <li><time>11:28</time><p>Arrivée à Kawaguchiko, bagages déposés au <b>ryokan Maruei</b> (réservé ✅ — check‑in dès 15h00)<span class="n">🚕 De la gare au ryokan (rive sud du lac) : taxi ≈ 10 min, ou bus rétro ligne rouge. ⭐ Au check‑in à 15h00 : réservez tout de suite un créneau du <b>bain privatif panoramique vue Fuji</b> (30 min par groupe, ≈ 1 650 ¥, premier arrivé premier servi) — visez le matin du 24, quand le Fuji est le plus dégagé.</span></p></li>
+            <li><time>12:00</time><p>🎫 <b>Acheter le pass bus 2 jours</b> (≈ 1 500 ¥/adulte) au guichet Fujikyu devant la gare<span class="n">Le pass « Kawaguchiko·Saiko·Motosuko » couvre les <b>3 lignes touristiques (rouge, verte, bleue)</b> en illimité sur 2 jours — il sert dès maintenant pour Oishi Park, et demain pour les grottes de lave et le village Iyashi‑no‑Sato. En espèces au guichet ou à bord ; profitez‑en pour prendre la <b>fiche horaire papier</b> des lignes verte et bleue (indispensable demain après‑midi, fréquence réduite hors saison). <a href="https://ticket.jorudan.co.jp/fujikyubus/ksm-2d/en/" target="_blank" rel="noopener">🎫 pass 2 jours en ligne (Jorudan) ↗</a></span></p></li>
+            <li><time>12:15</time><p>Bus rétro ligne rouge autour du lac jusqu'à Oishi Park<span class="n">Vue dégagée sur le Fuji au‑dessus du lac, parterres de kochia rouges en automne. Départ toutes les ~15 min de la gare de Kawaguchiko, Oishi Park est le terminus (~30 min). <a href="https://en.kawaguchiko.net/kawaguchiko-sight-seeing-bus-red-line/" target="_blank" rel="noopener">🚌 ligne rouge : arrêts &amp; horaires ↗</a></span></p></li>
+            <li><time>13:15</time><p>Déjeuner <i>hoto</i> — grosses nouilles plates au miso et courge<span class="n">Le plat de la région de Yamanashi. Copieux, réchauffant, et ça plaît aux enfants. <b>Choisissez une table avec vue sur le Fuji</b> — plusieurs adresses autour d'Oishi Park et de la rive nord s'y prêtent : c'est le déjeuner-carte-postale du voyage. <a href="https://www.google.com/maps/search/?api=1&amp;query=hoto%20restaurant%20Fuji%20view%20Kawaguchiko" target="_blank" rel="noopener">🍽 restos hoto avec vue ↗</a></span></p></li>
+            <li><time>15:00</time><p>Téléphérique Mt Fuji Panoramic (Kachi Kachi) : 3 min de montée, panorama lac + Fuji<span class="n">En haut : balançoire face au Fuji, cloche des amoureux, sentier court. Comptez 1 h 30. 💡 Billet combiné téléphérique + bateau disponible à la caisse si vous prenez l'option ci‑dessous.</span></p></li>
+            <li><time>16:30</time><p><i>Option</i> 🚤 promenade en bateau sur le lac (20 min)<span class="n">L'embarcadère est au pied du téléphérique — zéro trajet. Le Fuji vu depuis l'eau, en fin d'après‑midi quand la lumière rase le lac : la photo qui complète celle d'Oishi Park. Si vous la faites, l'onsen glisse simplement à 17h30 — le dîner kaiseki reste à 18h30.</span></p></li>
+            <li><time>17:00</time><p>Onsen du ryokan — rotenburo sur le toit avec vue sur le Fuji, ou le bain privatif si votre créneau est ce soir<span class="n">17h30 si vous avez pris le bateau.</span></p></li>
             <li><time>18:30</time><p>Dîner kaiseki au ryokan, servi en chambre ou en salon privé<span class="n">Inclus dans la réservation, comme le petit‑déjeuner. À savoir : la cuisine ne fait aucune adaptation (allergies, restrictions religieuses) — le kaiseki comprend poisson et fruits de mer.</span></p></li>
           </ul>
           <div class="note tip"><b>Le Fuji se montre le matin</b>
@@ -1547,6 +1621,10 @@ footer a{color:var(--ink-2)}
   <div class="wrap">
     <div class="eyebrow">Étape 4</div>
     <h2>Transports entre les villes — horaires proposés</h2>
+    <div class="bookdates"><span class="b b-yellow">🗓️ Ouvertures</span>
+      <span>Les 7 trajets à réserver s'ouvrent <b>1 mois avant, jour pour jour</b> — du
+      <b>19 septembre</b> (N'EX) au <b>1<sup>er</sup> octobre</b> (Nozomi du retour), en passant par le
+      <b>23 septembre</b> pour le Fuji Excursion. Calendrier complet en <a href="#alerte"><b>haut de page</b></a>.</span></div>
     <p class="lede">Tous les horaires ci‑dessous sont des propositions cohérentes avec le programme, à figer
       au moment de la réservation (les horaires précis 2026 s'ouvrent progressivement).
       Prix pour la famille : 3 tarifs adultes — l'aîné de 14 ans paie plein tarif dans les trains japonais
@@ -1572,10 +1650,10 @@ footer a{color:var(--ink-2)}
             <td><b>Ven 23/10</b></td>
             <td>Shinjuku → Kawaguchiko</td>
             <td>JR Ltd. Express <i>Fuji Excursion</i></td>
-            <td>08:30 → 10:30</td>
+            <td>09:30 → 11:28</td>
             <td>1 h 55</td>
             <td class="num">≈ 14 500 ¥</td>
-            <td><b>Ouverture le 23 septembre</b> (1 mois avant), places réservées obligatoires. Train très demandé en saison des couleurs. <b>Alternative :</b> bus autoroutier depuis Busta Shinjuku, ≈ 2 h 05 et moitié prix, mais réservation encore plus tendue.</td>
+            <td><b>✅ Réservé le 23 septembre</b> — Fuji‑Excursion n° 11, voiture 1, sièges 6C·6D·7C·7D (côté Fuji), 14 800 ¥ pour 3 adultes + 1 enfant. Billets papier à retirer à un distributeur JR East (prévu le 19 oct, Tokyo Station).</td>
           </tr>
           <tr>
             <td><b>Dim 25/10</b></td>
@@ -2063,9 +2141,10 @@ footer a{color:var(--ink-2)}
         <div class="todo"><input type="checkbox" id="t7" checked><label for="t7"><b>Billets Tokyo DisneySea du mercredi 21 octobre — achetés ✅</b><span class="n">✅ Achetés le 26 août : 4 × 1-Day Passport DisneySea (2 adultes + 1 junior + 1 enfant), 36 400 ¥ ≈ 208 €. Numéro de réservation dans l'e‑mail de confirmation. Reste à faire : installer l'app <b>Tokyo Disney Resort</b>, se connecter avec le même compte Disney et vérifier que les 4 billets (QR codes) s'affichent — c'est le QR de l'app qu'on scanne à l'entrée, et c'est dans l'app que s'achète le Premier Access Fantasy Springs le jour même.</span></label></div>
         <div class="todo"><input type="checkbox" id="t8"><label for="t8"><b>Souscrire l'assurance voyage famille</b><span class="n">🟠 Avec garantie annulation et frais médicaux — les soins au Japon sont chers pour un non‑résident. Vérifiez la couverture des sports/parcs d'attractions.</span></label></div>
         <div class="todo"><input type="checkbox" id="t9"><label for="t9"><b>Musée Ghibli de Mitaka (facultatif) — loterie du 10 septembre passée</b><span class="n">⚪️ La loterie s'est tenue le 10 septembre. C'était facultatif : vous faites déjà Ghibli Park le 26 octobre. Sans billet, le jour 5 reste sur Shibuya comme prévu — rien à rattraper.</span></label></div>
-        <div class="todo"><input type="checkbox" id="t10"><label for="t10"><b>Fuji Excursion : réservation le 23 septembre à l'ouverture</b><span class="n">🟡 1 mois avant le 23 octobre. 4 places ensemble. Sinon, bus autoroutier Shinjuku → Kawaguchiko en secours.</span></label></div>
-        <div class="todo"><input type="checkbox" id="t11"><label for="t11"><b>Créneaux Skytree, Shibuya Sky (coucher de soleil), teamLab, Sagano Romantic Train</b><span class="n">🟠 <b>C'est le moment</b> — ces créneaux s'ouvrent 3 à 5 semaines avant et la fenêtre est ouverte pour le début du séjour. Shibuya Sky au coucher du soleil : viser le créneau 16:20 ou 16:40.</span></label></div>
-        <div class="todo"><input type="checkbox" id="t12"><label for="t12"><b>Shinkansen sur SmartEX (Mishima → Nagoya, Nagoya → Kyoto, <u>Shin‑Osaka → Tokyo le 1<sup>er</sup> nov</u>) et Kintetsu vers Nara</b><span class="n">🟡 À l'ouverture, 1 mois avant — soit le <b>1<sup>er</sup> octobre</b> pour le train du retour, le plus important des trois : réservez le <i>Nozomi</i> de 09h00 avec les 4 sièges ensemble et la <b>rangée à espace bagages</b> en fin de voiture.</span></label></div>
+        <div class="todo"><input type="checkbox" id="t10" checked><label for="t10"><b>Fuji Excursion du vendredi 23 octobre — réservé ✅ (23 septembre)</b><span class="n">✅ <b>Fuji‑Excursion n° 11</b>, Shinjuku 09:30 → Kawaguchiko 11:28, <b>voiture 1, sièges 6C · 6D · 7C · 7D</b> (côté D = fenêtre Fuji). 3 adultes + 1 enfant, <b>14 800 ¥</b> tout compris, payé par carte sur JR‑EAST Train Reservation. Le 9h30 a été préféré au 8h30 pour avoir les 4 sièges ensemble. <b>Reste à faire : retirer les billets papier</b> à un distributeur JR East (QR code de la confirmation + carte du paiement) — prévu le 19 octobre à Tokyo Station en sortant du N'EX. N° de réservation et code de retrait dans le fichier confidentiel.</span></label></div>
+        <div class="todo"><input type="checkbox" id="t11"><label for="t11"><b>Créneaux Skytree, Shibuya Sky (coucher de soleil) et teamLab</b><span class="n">🟠 <b>C'est le moment</b> — ces créneaux s'ouvrent 3 à 5 semaines avant et la fenêtre est ouverte pour le début du séjour. Shibuya Sky au coucher du soleil : viser le créneau 16:20 ou 16:40. <b>Le Sagano Romantic Train a basculé dans le calendrier des trains</b> (ouverture le 29 septembre, 1 mois avant) — voir la ligne ci‑dessous.</span></label></div>
+        <div class="todo"><input type="checkbox" id="t12"><label for="t12"><b>Les 7 trains à réserver — ouvertures échelonnées du 19 septembre au 1<sup>er</sup> octobre</b><span class="n">🟡 Chacun s'ouvre <b>1 mois avant, jour pour jour</b>. Dans l'ordre : <b>19/09</b> N'EX Narita → Tokyo · <b>23/09</b> 🔴 Fuji Excursion (voir ci‑dessus) · <b>25/09</b> <i>Hikari</i> Mishima → Nagoya, sièges <b>côté droit</b> pour le Fuji · <b>27/09</b> <i>Nozomi</i> Nagoya → Kyoto · <b>29/09</b> Sagano Romantic Train · <b>30/09</b> Kintetsu Ltd Express Kyoto → Nara (<b>site Kintetsu, pas SmartEX</b> : ligne privée) · <b>1<sup>er</sup>/10</b> 🔴 <i>Nozomi</i> Shin‑Osaka → Tokyo <u>et</u> N'EX Tokyo → Narita. <b>Le plus important reste celui du 1<sup>er</sup> octobre</b> : <i>Nozomi</i> de 09h00, 4 sièges ensemble et la <b>rangée à espace bagages</b> en fin de voiture (gratuite, obligatoire au‑delà de 160 cm cumulés — vous montez avec les 5 valises). Comptes à créer avant : <b>SmartEX</b> pour les trois Shinkansen, <b>JR East</b> pour le Fuji Excursion et les deux N'EX.</span></label></div>
+        <div class="todo"><input type="checkbox" id="t20"><label for="t20"><b>Bus autoroutier Kawaguchiko → Mishima du 25 octobre</b><span class="n">🟠 <b>Réservable dès maintenant</b> — il ne suit pas la règle du mois. Fujikyu Bus, départ 11h00 de la gare routière de Kawaguchiko, ≈ 2 260 ¥/adulte, <b>sièges réservés</b> : <b>moins cher en ligne qu'au guichet</b>, et le bus est plein en saison des couleurs. C'est le maillon qui évite de remonter à Tokyo pour rejoindre le Shinkansen — s'il manque, toute la journée 8 tombe. Réservation : highwaybus.com.</span></label></div>
         <div class="todo"><input type="checkbox" id="t13"><label for="t13"><b>eSIM ou Pocket Wi‑Fi pour 4</b><span class="n">🟡 Une eSIM data par adulte (≈ 20–30 € pour 20 Go) ou un Pocket Wi‑Fi familial. Indispensable : tous les billets sont dans les apps.</span></label></div>
         <div class="todo"><input type="checkbox" id="t14"><label for="t14"><b>Visit Japan Web : 4 comptes et QR codes générés</b><span class="n">🟡 La veille du départ. Immigration + douane en un scan. À faire pour chaque membre de la famille, enfants compris.</span></label></div>
         <div class="todo"><input type="checkbox" id="t15"><label for="t15"><b>Enregistrement en ligne, 24 h avant chaque vol</b><span class="n">🟡 Quatre vols concernés à l'aller comme au retour, sur les deux dossiers. Dernière occasion de corriger un siège mal placé.</span></label></div>
@@ -2781,15 +2860,24 @@ footer a{color:var(--ink-2)}
 
 <div id="remind" role="dialog" aria-modal="true" aria-labelledby="remtitle">
   <div class="rembox">
-    <h3 id="remtitle">⏰ Rappel — l'achat à ne pas rater</h3>
-    <p><b>Train Fuji Excursion (vendredi 23 octobre)</b> — JR Limited Express
-      <i>Fuji Excursion</i>, Shinjuku → Kawaguchiko direct, ≈ 1 h 55, environ 4 130 ¥/adulte,
-      <b>sièges réservés obligatoires</b>. Réservation ouverte 1 mois avant, soit le
-      <b>23 septembre — mettez une alarme</b> : c'est un train très demandé en pleine saison
-      des couleurs (4 places ensemble ; secours : bus autoroutier Shinjuku → Kawaguchiko).</p>
+    <h3 id="remtitle">🚄 Transports à réserver — 1 mois avant, jour pour jour</h3>
+    <p>Cochez au fur et à mesure : la liste se souvient de vos cases sur cet appareil.
+      Le Fuji Excursion est fait ✅ — restent les Shinkansen (SmartEX), le N'EX du retour (JR East),
+      le bus vers Mishima, le Sagano et le Kintetsu.</p>
+    <ul id="remlist">
+      <li data-k="fuji" class="ok"><input type="checkbox" id="rm-fuji" checked disabled><label for="rm-fuji"><span class="d">23 sept</span> Fuji Excursion Shinjuku → Kawaguchiko · ven. 23 oct 09:30 <span class="w">— réservé, voiture 1 sièges 6C·6D·7C·7D. Billets papier à retirer le 19 oct.</span></label></li>
+      <li data-k="hikari"><input type="checkbox" id="rm-hikari"><label for="rm-hikari"><span class="d">25 sept</span> Shinkansen Hikari Mishima → Nagoya · dim. 25 oct 13:45 <span class="w">— SmartEX, 4 places, côté droit pour le Fuji.</span></label></li>
+      <li data-k="liner"><input type="checkbox" id="rm-liner"><label for="rm-liner"><span class="d">~25 sept</span> Bus Mishima·Kawaguchiko Liner · dim. 25 oct 11:00 <span class="w">— highwaybus.com, sièges réservés, plein en saison des couleurs.</span></label></li>
+      <li data-k="nozomi1"><input type="checkbox" id="rm-nozomi1"><label for="rm-nozomi1"><span class="d">27 sept</span> Shinkansen Nozomi Nagoya → Kyoto · mar. 27 oct 14:00 <span class="w">— SmartEX, 36 min, juste pour les 4 places ensemble.</span></label></li>
+      <li data-k="sagano"><input type="checkbox" id="rm-sagano"><label for="rm-sagano"><span class="d">29 sept</span> Sagano Romantic Train · jeu. 29 oct 13:45 <span class="w">— guichet JR West ou agence en ligne, complet en saison.</span></label></li>
+      <li data-k="kintetsu"><input type="checkbox" id="rm-kintetsu"><label for="rm-kintetsu"><span class="d">30 sept</span> Kintetsu Ltd Express Kyoto → Nara · ven. 30 oct matin <span class="w">— site Kintetsu, pas SmartEX.</span></label></li>
+      <li data-k="nozomi2" class="hot"><input type="checkbox" id="rm-nozomi2"><label for="rm-nozomi2"><span class="d">1ᵉʳ oct 🔴</span> Shinkansen Nozomi Shin‑Osaka → Tokyo · dim. 1ᵉʳ nov 09:00 <span class="w">— SmartEX, 4 places + rangée espace bagages : le plus important, c'est le vol du retour.</span></label></li>
+      <li data-k="nex2"><input type="checkbox" id="rm-nex2"><label for="rm-nex2"><span class="d">1ᵉʳ oct</span> N'EX Tokyo → Narita T1 · dim. 1ᵉʳ nov 12:15 <span class="w">— JR East, même jour que le Nozomi : tout d'un coup.</span></label></li>
+      <li data-k="nex1"><input type="checkbox" id="rm-nex1"><label for="rm-nex1"><span class="d">à l'arrivée</span> N'EX Narita T1 → Tokyo · lun. 19 oct 14:45 <span class="w">— sans tension : guichet JR à Narita, ou JR East à l'avance pour éviter la file.</span></label></li>
+    </ul>
     <div class="btns">
-      <button id="rem-done">✅ C'est réservé — ne plus afficher</button>
-      <button id="rem-later">Me le rappeler à la prochaine visite</button>
+      <button id="rem-later">Fermer</button>
+      <button id="rem-done">✅ Tout est réservé — ne plus afficher</button>
     </div>
   </div>
 </div>
@@ -2797,15 +2885,27 @@ footer a{color:var(--ink-2)}
 <script>
 (function(){
   "use strict";
-  /* ---------- popup rappel Fuji Excursion ---------- */
+  /* ---------- popup rappel transports à réserver ---------- */
   var pop=document.getElementById('remind');
   if(pop){
-    var over=new Date()>new Date(2026,9,23);
-    var done=false;
-    try{ done=localStorage.getItem('jp-fuji-remind')==='done'; }catch(e){}
-    if(!done && !over) pop.classList.add('on');
+    var over=new Date()>new Date(2026,10,1);
+    var done=false, ticks={};
+    try{ done=localStorage.getItem('jp-transport-remind')==='done'; }catch(e){}
+    try{ ticks=JSON.parse(localStorage.getItem('jp-transport-ticks')||'{}')||{}; }catch(e){}
+    var items=pop.querySelectorAll('#remlist li');
+    var left=0;
+    Array.prototype.forEach.call(items,function(li){
+      var k=li.getAttribute('data-k'), cb=li.querySelector('input');
+      if(cb.disabled) return;
+      if(ticks[k]){ cb.checked=true; li.classList.add('ok'); } else left++;
+      cb.onchange=function(){
+        ticks[k]=cb.checked; li.classList.toggle('ok',cb.checked);
+        try{ localStorage.setItem('jp-transport-ticks',JSON.stringify(ticks)); }catch(e){}
+      };
+    });
+    if(!done && !over && left>0) pop.classList.add('on');
     document.getElementById('rem-done').onclick=function(){
-      try{ localStorage.setItem('jp-fuji-remind','done'); }catch(e){}
+      try{ localStorage.setItem('jp-transport-remind','done'); }catch(e){}
       pop.classList.remove('on');
     };
     document.getElementById('rem-later').onclick=function(){ pop.classList.remove('on'); };
