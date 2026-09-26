@@ -345,7 +345,12 @@ footer a{color:var(--ink-2)}
 #rem-done{background:var(--zain-green2);color:#fff}
 #rem-later{background:var(--line-2);color:var(--ink-2)}
 #rem-later:hover{color:var(--ink)}
-@media print{#remind{display:none!important}}
+#remfab{position:fixed;right:16px;bottom:16px;z-index:90;border:0;border-radius:999px;
+  padding:11px 16px;background:#0053A5;color:#fff;font:700 13.5px/1 Inter,Arial,sans-serif;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);cursor:pointer;display:none}
+#remfab.on{display:block}
+#remfab b{background:#fff;color:#0053A5;border-radius:999px;padding:2px 7px;margin-left:6px}
+@media print{#remind,#remfab{display:none!important}}
 </style>
 
 <nav>
@@ -2858,6 +2863,8 @@ footer a{color:var(--ink-2)}
 
 <div id="lb" role="dialog" aria-modal="true" aria-label="Photo agrandie"><img alt=""><figcaption></figcaption></div>
 
+<button id="remfab" type="button">🚄 À réserver <b id="remcount">0</b></button>
+
 <div id="remind" role="dialog" aria-modal="true" aria-labelledby="remtitle">
   <div class="rembox">
     <h3 id="remtitle">🚄 Transports à réserver — 1 mois avant, jour pour jour</h3>
@@ -2879,7 +2886,7 @@ footer a{color:var(--ink-2)}
     </ul>
     <div class="btns">
       <button id="rem-later">Fermer</button>
-      <button id="rem-done">✅ Tout est réservé — ne plus afficher</button>
+      <button id="rem-done">Ne plus ouvrir automatiquement</button>
     </div>
   </div>
 </div>
@@ -2891,8 +2898,10 @@ footer a{color:var(--ink-2)}
   var pop=document.getElementById('remind');
   if(pop){
     var over=new Date()>new Date(2026,10,1);
-    var done=false, ticks={};
-    try{ done=localStorage.getItem('jp-transport-remind')==='done'; }catch(e){}
+    var done=false, ticks={}, fab=document.getElementById('remfab'), cnt=document.getElementById('remcount');
+    /* la clé change à chaque nouvelle version de la liste : un ancien « ne plus afficher » ne masque pas les nouveaux items */
+    var VER='v3-bagages';
+    try{ done=localStorage.getItem('jp-transport-remind')===VER; }catch(e){}
     try{ ticks=JSON.parse(localStorage.getItem('jp-transport-ticks')||'{}')||{}; }catch(e){}
     var items=pop.querySelectorAll('#remlist li');
     var left=0;
@@ -2902,12 +2911,16 @@ footer a{color:var(--ink-2)}
       if(ticks[k]){ cb.checked=true; li.classList.add('ok'); } else left++;
       cb.onchange=function(){
         ticks[k]=cb.checked; li.classList.toggle('ok',cb.checked);
+        left+=cb.checked?-1:1; refresh();
         try{ localStorage.setItem('jp-transport-ticks',JSON.stringify(ticks)); }catch(e){}
       };
     });
+    function refresh(){ cnt.textContent=left; fab.classList.toggle('on',!over && left>0); }
+    refresh();
+    fab.onclick=function(){ pop.classList.add('on'); };
     if(!done && !over && left>0) pop.classList.add('on');
     document.getElementById('rem-done').onclick=function(){
-      try{ localStorage.setItem('jp-transport-remind','done'); }catch(e){}
+      try{ localStorage.setItem('jp-transport-remind',VER); }catch(e){}
       pop.classList.remove('on');
     };
     document.getElementById('rem-later').onclick=function(){ pop.classList.remove('on'); };
