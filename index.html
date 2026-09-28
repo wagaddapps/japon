@@ -398,6 +398,7 @@ body.dvopen{overflow:hidden}
 .dvbudget td.t{width:50px;font-weight:700;color:var(--zain-blue);font-variant-numeric:tabular-nums}
 .dvbudget td.y{text-align:right;white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}
 .dvbudget td .d{display:block;color:var(--ink-3);font-size:12px}
+.dvbudget td.y .e{display:block;color:var(--ink-3);font-size:12px;font-weight:600}
 .dvbudget tr.paid td.y{color:var(--zain-green2)}
 .dvbudget tfoot td{border-bottom:0;font-weight:800;padding-top:10px}
 .dvtot{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
@@ -3177,11 +3178,11 @@ body.dvopen{overflow:hidden}
         var y=+c.yen||0; if(c.paid) paid+=y; else pay+=y;
         rows+='<tr class="'+(c.paid?'paid':'')+'"><td class="t">'+esc(c.t||'')+'</td><td>'+rich(c.label)+
           (c.detail?'<span class="d">'+rich(c.detail)+(c.est?' · estimation':'')+'</span>':(c.est?'<span class="d">estimation</span>':''))+
-          '</td><td class="y">'+(c.paid?'✅ ':'')+yen(y)+'</td></tr>';
+          '</td><td class="y">'+(c.paid?'✅ ':'')+yen(y)+'<span class="e">'+eur(y)+'</span></td></tr>';
       });
       var budget=costs.length? '<table class="dvbudget"><tbody>'+rows+'</tbody></table>'+
         '<div class="dvtot"><span class="topay">À payer ce jour : <b>'+yen(pay)+'</b> '+eur(pay)+'</span>'+
-        (paid?'<span class="done">Déjà payé : <b>'+yen(paid)+'</b></span>':'')+'</div>' : '';
+        (paid?'<span class="done">Déjà payé : <b>'+yen(paid)+'</b> '+eur(paid)+'</span>':'')+'</div>' : '';
 
       var hot=d.hotel||{}, hotel='';
       if(hot.name||hot.checkout){
@@ -3208,7 +3209,7 @@ body.dvopen{overflow:hidden}
         var t=li.querySelector('time'), p=li.querySelector('p'); if(!t||!p) return;
         (byT[t.textContent.trim()]||[]).forEach(function(c){
           var em=document.createElement('em'); em.className='px'+(c.paid?' paid':'');
-          em.textContent=(c.paid?'✅ payé ':'')+yen(+c.yen||0);
+          em.textContent=(c.paid?'✅ payé ':'')+yen(+c.yen||0)+' · '+eur(+c.yen||0);
           var n=p.querySelector('.n'); p.insertBefore(em,n);
         });
         if(isToday && mins[j]!=null){
